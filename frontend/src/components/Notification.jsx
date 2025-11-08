@@ -15,7 +15,7 @@ const Notification = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/v1/notifications", {
+        const res = await axios.get("https://socialbutterfly.onrender.com/api/v1/notifications", {
           withCredentials: true,
         });
         dispatch(setNotifications(res.data.notifications));

@@ -11,7 +11,7 @@ const useGetUserProfile = (userId) => {
         console.log("Fetching profile for userId:", userId);
         const fetchUserProfile = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/v1/user/${userId}/profile`, { withCredentials: true });
+                const res = await axios.get(`https://socialbutterfly.onrender.com/api/v1/user/${userId}/profile`, { withCredentials: true });
                 if (res.data.success) { 
                     dispatch(setUserProfile(res.data.user));
                 }

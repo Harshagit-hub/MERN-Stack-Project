@@ -22,7 +22,7 @@ const ChatPage = () => {
     if (!textMessage || !selectedUser) return;
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/message/send/${selectedUser._id}`,
+        `https://socialbutterfly.onrender.com/api/v1/message/send/${selectedUser._id}`,
         { textMessage },
         { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
       );

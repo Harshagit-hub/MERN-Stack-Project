@@ -33,7 +33,7 @@ const Notification = () => {
         Notifications
       </h2>
       <div className="space-y-3 sm:space-y-4">
-        {notifications.length === 0 ? (
+        {!notifications?.length ? (
           <p className="text-gray-500 text-sm sm:text-base text-center sm:text-left">
             No notifications yet
           </p>
